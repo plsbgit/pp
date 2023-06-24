@@ -1,0 +1,46 @@
+def fact(n):
+    if n<=1:
+        return 1
+    else:
+        return n*fact(n-1)
+while True:
+    n=int(input("Enter a number :"))
+    print("Factorial of ",n,"is",fact(n))
+    ch=input("Do you want to another Y/N")
+    if ch=='Y' or ch=='y':
+        continue
+    else:
+        break
+------------------------------
+def fib(n):
+    if n<=1:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+while True:
+    n=int(input("Enter a number :"))
+    if n<=0 :
+        print("Enter positive numbers")
+    else:
+        for i in range(n):
+            print(fib(i),end=" ")
+    ch=input("\nDo you want to another Y/N")
+    if ch=='Y' or ch=='y':
+        continue
+    else:
+        break
+----------------------------------------------------------
+while True:
+    def sumofdigits(n):
+        if n<=9:
+            return n
+        else:
+            rem=n%10
+            return int(rem+sumofdigits(n/10))
+    n=int(input("Enter a number"))
+    print("sum of digits of ",n,"is",sumofdigits(n))
+    ch=input("\nDo you want to another Y/N")
+    if ch=='Y' or ch=='y':
+        continue
+    else:
+        break
