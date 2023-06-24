@@ -1,0 +1,42 @@
+a=open("file.txt","r")
+s=a.read()
+words=s.split()
+for i in words:
+    if(i[0]=="t" or i[0]=="T" or i[0]=="A" or i[0]=="a" ):
+        print(i)
+a.close()
+--------------------------------------------
+
+------------------------------------------
+import pickle
+def createfile():
+    file=open("book.txt",'ab')
+    bookno=int(input("Enter  book number"))
+    bookname=input("Enter the book number")
+    author=input("Enter author name")
+    price=int(input("Enter price"))
+    record=[bookno,bookname,author,price]
+    pickle.dump(record,file)
+    file.close()
+def countrec():
+    file=open("book.txt",'rb')
+    count=0
+    try:
+        while True:
+            record=pickle.load(file)
+            if record[2]==author:
+                count+=1
+        except EOF error
+            pass
+        return count
+    file.close()
+def testprogram():
+    while True:
+        createfile()
+        choice=input("Add one more record Y\N")
+        if choice=='n' or choice=='N':
+            break
+        author=input("Enter author name")
+        n=countrec(author)
+        print("NO of books are",n)
+        testprogram()
