@@ -1,0 +1,24 @@
+3a
+import re
+str="To a build centers of excellence import high quality education and install high standards of ethics and professionalism through strategic efforts"
+a=re.findall("[a-z,A-Z]+[s][ |,|.|:]",str)
+print(a)
+cnt=0
+for i in a:
+    cnt+=1
+print("no of words ends with s are :",cnt)
+----------------------------------------------------------------
+3b
+import re
+str="cinema ticket is 200 and GST is 24.5"
+a=re.findall("[0-9]",str)
+print(a)
+sum=0
+for i in a:
+    sum+=int(i)
+print("sum of digits is :",sum)
+-----------------------------------------------------------------
+import re 
+str="To a build centers of excellence import high quality education."
+a=re.sub('a','A',str)
+print(a)
